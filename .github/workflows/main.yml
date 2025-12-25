@@ -25,7 +25,6 @@ jobs:
         activate-environment: base
 
     - name: Install mlflow
-      shell: bash -l {0}
       run: |
         pip install mlflow==2.19.0
 
