@@ -16,6 +16,18 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
+    
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        auto-update-conda: true
+        python-version: "3.12"
+        activate-environment: base
+
+    - name: Install mlflow
+      shell: bash -l {0}
+      run: |
+        pip install mlflow==2.19.0
 
     - name: Install dependencies
       run: |
