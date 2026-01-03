@@ -4,11 +4,12 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-mlflow.set_tracking_uri("file:./mlruns")
+# MLflow setup
+mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 mlflow.set_experiment("Latihan Fraud Detection RandomForest")
 
 # Load preprocessed dataset
-data = pd.read_csv("/Users/axzolotle/Code/Self-project/mlops-subs/membangun_model/data_clean.csv")
+data = pd.read_csv("MLProject/data_clean.csv")
 
 # Feature engineering 
 # Compute frequency features only if they are not already present.
