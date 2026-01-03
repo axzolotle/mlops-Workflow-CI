@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/axzolotle/Code/Self-project/mlops-Workflow-CI/mlruns/0/b7cb1740c1bb40148c48a9146871d50a/artifacts
+end_time: 1767167249325
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b7cb1740c1bb40148c48a9146871d50a
+run_name: stylish-hen-958
+run_uuid: b7cb1740c1bb40148c48a9146871d50a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767166856206
+status: 3
+tags: []
+user_id: axzolotle
