@@ -2,10 +2,17 @@ name: fraud-detection-ci
 
 conda_env: conda.yaml
 
+parameters:
+  data_path: {type: string}
+  random_state: {type: int}
+  n_estimators: {type: int}
+  max_depth: {type: int}
+
 entry_points:
   main:
-    parameters:
-    alpha: {type: float, default: 0.5}
-    l1_ratio: {type: float, default: 0.1}
-    dataset : {type: string, default: "data_clean.csv"}
-    command: "python modelling.py"
+    command: >
+      python modelling.py
+      --data_path {data_path}
+      --random_state {random_state}
+      --n_estimators {n_estimators}
+      --max_depth {max_depth}
