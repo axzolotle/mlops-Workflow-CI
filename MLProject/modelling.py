@@ -9,7 +9,7 @@ mlflow.set_tracking_uri("file:./mlruns")
 mlflow.set_experiment("Latihan Fraud Detection RandomForest")
 
 # Load preprocessed dataset
-data = pd.read_csv("/Users/axzolotle/Code/Self-project/mlops-subs/membangun_model/data_clean.csv")
+data = pd.read_csv("MLProject/data_clean.csv")
 
 # Feature engineering 
 # Compute frequency features only if they are not already present.
