@@ -44,22 +44,21 @@ X_train, X_test, y_train, y_test = train_test_split(
 input_example = X_train.iloc[:5]
 
 # Training + MLflow Tracking
-with mlflow.start_run():
-    mlflow.autolog()
+mlflow.autolog()
 
-    n_estimators = 100
-    random_state = 42
-    max_depth = 23
+n_estimators = 100
+random_state = 42
+max_depth = 23
 
-    model = RandomForestClassifier(
-        n_estimators=n_estimators,
-        random_state=random_state,
-        max_depth=max_depth
-    )
+model = RandomForestClassifier(
+    n_estimators=n_estimators,
+    random_state=random_state,
+    max_depth=max_depth
+)
 
-    model.fit(X_train, y_train)
+model.fit(X_train, y_train)
 
-    y_pred = model.predict(X_test)
-    y_proba = model.predict_proba(X_test)[:, 1]
+y_pred = model.predict(X_test)
+y_proba = model.predict_proba(X_test)[:, 1]
 
 
